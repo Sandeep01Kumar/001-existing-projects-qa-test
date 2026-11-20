@@ -17,6 +17,7 @@ app.get('/good-evening', (req, res) => {
   res.end('Good evening\n');
 });
 
-app.listen(port, hostname, () => {
+app.listen(port, hostname, (err) => {
+  if (err) throw err;
   console.log(`Server running at http://${hostname}:${port}/`);
 });
